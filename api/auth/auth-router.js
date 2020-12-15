@@ -69,7 +69,8 @@ function makeToken(user) {
     role: user.role,
   }
   const options = {
-    expiresIn: 
+    expiresIn: '20s',
+    
   }
 }
 
