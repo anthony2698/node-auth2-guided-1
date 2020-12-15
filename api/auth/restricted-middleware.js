@@ -13,7 +13,8 @@ module.exports = (req, res, next) => {
       if (err) {
         res.status(401).json('we wants GOOD token: ' + err.message)
       } else {
-        // 
+        // tack the token to req 
+        req.decodedToken = decoded
       }
     })
   }
