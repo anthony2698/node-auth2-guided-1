@@ -39,11 +39,10 @@ router.post("/login", (req, res) => {
       .then(([user]) => {
         // compare the password the hash stored in the database
         if (user && bcryptjs.compareSync(password, user.password)) {
-          // I produce a token with info about the user (id)
-          // send the token back to the user
-          // server says I am not going to remember anything about you
-          // your data is in the token I am giving you the client
-          // i can verify the integrity of the token (signature)
+          // I produce a token containing info about the user (id)
+          // I am not going to remember anything about you the user
+          // your data is in the token I am sending you the client
+          // i can verify the integrity of the token (signature) when it comes back
           // i can check that the token hasn't expired
           // don't forget to send me the token
           const token = makeToken(user);
