@@ -9,6 +9,10 @@ module.exports = (req, res, next) => {
     res.status(401).json('we wants token')
   } else {
     // check it with jwt (async form verify)
-    jwt.verify(token, 'foo', )
+    jwt.verify(token, 'foo', (err, decoded) => {
+      if (err) {
+        res.j
+      }
+    })
   }
 };
