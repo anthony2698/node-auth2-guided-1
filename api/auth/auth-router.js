@@ -63,6 +63,9 @@ router.post("/login", (req, res) => {
 
 function makeToken(user) {
   // we use a lib called jsonwebtoken
+  const payload = {
+    
+  }
 }
 
 module.exports = router;
