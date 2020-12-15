@@ -1,5 +1,5 @@
 const bcryptjs = require("bcryptjs");
-
+const jwt = require('jsonwebtoken');
 const router = require("express").Router();
 
 const Users = require("../users/users-model.js");
@@ -70,8 +70,8 @@ function makeToken(user) {
   }
   const options = {
     expiresIn: '20s',
-    
   }
+  return jwt.sign(payload, '')
 }
 
 module.exports = router;
