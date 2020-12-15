@@ -44,7 +44,7 @@ router.post("/login", (req, res) => {
           // your data is in the token I am sending you the client
           // i can verify the integrity of the token (signature) when it comes back
           // i can check that the token hasn't expired
-          // don't forget to send me the token
+          // don't forget to send me the token!!!!!
           const token = makeToken(user);
 
           res.status(200).json({
