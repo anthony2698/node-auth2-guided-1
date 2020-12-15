@@ -66,7 +66,10 @@ function makeToken(user) {
   const payload = {
     subject: user.id,
     username: user.username,
-    role: 
+    role: user.role,
+  }
+  const options = {
+    expiresIn: 
   }
 }
 
