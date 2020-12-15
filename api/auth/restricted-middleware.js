@@ -12,7 +12,8 @@ module.exports = (req, res, next) => {
       if (err) {
         res.status(401).json('we wants GOOD token: ' + err.message)
       } else {
-        // tack the token to req 
+        // token valid and not expired,
+        // tack the decoded token to req and proceed
         req.decodedToken = decoded
         next()
       }
